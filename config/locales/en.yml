@@ -28,4 +28,44 @@
 #       enabled: "ON"
 
 en:
+  # Application name
+  app_name: "Trade School Management System"
+  
+  # Common phrases
   hello: "Hello world"
+  
+  # Date and time formats
+  date:
+    formats:
+      default: "%B %d, %Y"
+      short: "%b %d"
+      long: "%A, %B %d, %Y"
+  
+  time:
+    formats:
+      default: "%B %d, %Y at %I:%M %p"
+      short: "%b %d, %I:%M %p"
+      long: "%A, %B %d, %Y at %I:%M %p %Z"
+  
+  # Common actions
+  actions:
+    save: "Save"
+    cancel: "Cancel"
+    delete: "Delete"
+    edit: "Edit"
+    create: "Create"
+    update: "Update"
+    show: "Show"
+    back: "Back"
+    next: "Next"
+    previous: "Previous"
+    submit: "Submit"
+  
+  # Common messages
+  messages:
+    saved: "Saved successfully"
+    updated: "Updated successfully"
+    deleted: "Deleted successfully"
+    error: "An error occurred"
+    not_found: "Not found"
+    unauthorized: "You are not authorized to perform this action"
