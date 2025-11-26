@@ -25,8 +25,8 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
   end
 
-  # Change to :null_store to avoid any caching.
-  config.cache_store = :memory_store
+  # Use Solid Cache for caching in development
+  config.cache_store = :solid_cache_store
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
@@ -51,6 +51,9 @@ Rails.application.configure do
 
   # Append comments with runtime information tags to SQL queries in logs.
   config.active_record.query_log_tags_enabled = true
+
+  # Use Solid Queue for background jobs
+  config.active_job.queue_adapter = :solid_queue
 
   # Highlight code that enqueued background job in logs.
   config.active_job.verbose_enqueue_logs = true
