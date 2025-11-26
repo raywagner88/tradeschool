@@ -3,7 +3,6 @@
 
   <div class="root">
     <h1 class="h1">Hello {{ name }}!</h1>
-
     <div>
       <a href="https://inertia-rails.dev" target="_blank">
         <img class="logo" :src="inertiaSvg" alt="Inertia logo" />

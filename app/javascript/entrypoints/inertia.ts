@@ -1,5 +1,8 @@
+import '@/assets/css/main.css'
+
 import { createInertiaApp } from '@inertiajs/vue3'
 import { createApp, DefineComponent, h } from 'vue'
+import ui from '@nuxt/ui/vue-plugin'
 
 createInertiaApp({
   // Set default page title
@@ -33,6 +36,7 @@ createInertiaApp({
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .use(plugin)
+      .use(ui)
       .mount(el)
   },
 

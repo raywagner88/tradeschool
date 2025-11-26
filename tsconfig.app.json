@@ -28,5 +28,5 @@
     }
   },
 
-  "include": ["app/javascript/**/*.ts", "app/javascript/**/*.tsx", "app/javascript/**/*.vue"]
+  "include": ["app/javascript/**/*.ts", "app/javascript/**/*.tsx", "app/javascript/**/*.vue", "auto-imports.d.ts", "components.d.ts"]
 }
