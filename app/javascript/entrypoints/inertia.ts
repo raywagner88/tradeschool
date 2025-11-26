@@ -3,6 +3,7 @@ import '@/assets/css/main.css'
 import { createInertiaApp } from '@inertiajs/vue3'
 import { createApp, DefineComponent, h } from 'vue'
 import ui from '@nuxt/ui/vue-plugin'
+import DashboardLayout from '../layouts/DashboardLayout.vue'
 
 createInertiaApp({
   // Set default page title
@@ -19,16 +20,20 @@ createInertiaApp({
     const pages = import.meta.glob<DefineComponent>('../pages/**/*.vue', {
       eager: true,
     })
-    const page = pages[`../pages/${name}.vue`]
-    if (!page) {
+
+    const pageModule = pages[`../pages/${name}.vue`]
+    if (!pageModule) {
       console.error(`Missing Inertia page component: '${name}.vue'`)
+      return null
     }
 
-    // To use a default layout, import the Layout component
-    // and use the following lines.
+    const page = pageModule.default || pageModule
+
+    // Use DashboardLayout as default layout for all pages
     // see https://inertia-rails.dev/guide/pages#default-layouts
-    //
-    // page.default.layout = page.default.layout || Layout
+    if (page && !page.layout) {
+      page.layout = DashboardLayout
+    }
 
     return page
   },
