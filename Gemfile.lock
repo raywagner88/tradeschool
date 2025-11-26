@@ -137,6 +137,8 @@ GEM
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
+    inertia_rails (3.13.0)
+      railties (>= 6)
     io-console (0.8.1)
     irb (1.15.3)
       pp (>= 0.6.0)
@@ -398,6 +400,7 @@ DEPENDENCIES
   dotenv-rails
   image_processing (~> 1.2)
   importmap-rails
+  inertia_rails
   jbuilder
   kamal
   pg (~> 1.1)
