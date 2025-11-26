@@ -35,7 +35,7 @@ This epic is mandatory to build first as it provides the foundation for managing
 
 ## Dependencies
 
-- None (this is the first epic to build)
+- **Epic 0 (Application Foundation)**: Requires Rails, Inertia.js, Vue, Nuxt UI, Devise, Pundit, and layout infrastructure
 
 ## Integration Points
 

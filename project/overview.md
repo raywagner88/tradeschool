@@ -29,6 +29,15 @@ This system is designed to provide an all-in-one operational layer for schools w
 
 The platform is made up of modular epics, each representing a large, cohesive subsystem:
 
+### 0. Application Foundation
+**Status**: Mandatory - Build First
+
+This epic establishes the foundational infrastructure for the entire application. It sets up Rails with Inertia.js, Vue.js, and Nuxt UI, installs and configures essential gems (Devise, Pundit, Audited, Jbuilder), sets up js-routes, and creates the initial application layout structure using the Nuxt UI dashboard template.
+
+This epic is mandatory to build first as it provides the technical foundation that all other epics depend upon.
+
+[View Epic Details →](./epics/00-application-foundation.md)
+
 ### 1. Product Admin Portal (Platform Console)
 **Status**: Mandatory - Build First
 
@@ -305,6 +314,8 @@ Placeholder epic for potential international student services including SEVIS in
 ## Epic Dependencies
 
 ```
+Application Foundation (0)
+    ↓
 Product Admin Portal (1)
     ↓
 Multi-Tenancy (2) → RBAC (3)
@@ -335,6 +346,7 @@ Externships (24) → Career Services (25)
 ## Development Priorities
 
 ### Phase 1: Foundation (Must Build First)
+0. Application Foundation
 1. Product Admin Portal
 2. Multi-Tenancy & Organization Foundations
 3. RBAC
